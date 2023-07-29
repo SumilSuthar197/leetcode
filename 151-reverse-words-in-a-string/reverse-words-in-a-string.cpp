@@ -2,7 +2,7 @@ class Solution {
 public:
     string reverseWords(string s) {
         stack<string> st;
-        string temp="",ans="";
+        string temp="";
         for(int i=0;i<s.length()+1;i++){
             if(s[i]==' ' || i==s.length()){
                 if(temp!=""){
@@ -14,12 +14,12 @@ public:
                 temp+=s[i];
             }
         }
+        temp="";
         while(st.size()!=1){
-            cout<<"a"<<st.top()<<"b"<<"\n";
-            ans+=st.top()+" ";
+            temp+=st.top()+" ";
             st.pop();
         }
-        ans+=st.top();
-        return ans;
+        temp+=st.top();
+        return temp;
     }
 };
