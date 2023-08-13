@@ -4,7 +4,7 @@ public:
         int sum=INT_MAX;
         if(target<0) sum=-sum;
         sort(nums.begin(),nums.end());
-        for(int m=0;m<nums.size();m++){
+        for(int m=0;m<nums.size()-2;m++){
             int i=m+1,j=nums.size()-1;
             while(i<j){
                 int total=nums[m]+nums[i]+nums[j];
