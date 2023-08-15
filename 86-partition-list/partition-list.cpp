@@ -27,6 +27,7 @@ public:
             }
             head=head->next;
         }
+
         beforeTail->next=listAfter->next;
         afterTail->next=nullptr;
         return listBefore->next;
