@@ -2,7 +2,6 @@ class Solution {
 public:
     string makeGood(string s) {
         stack<char> st;
-        string result="";
         for(char i:s){
             if(!st.empty() && abs(st.top()-i)==32){
                 st.pop();
@@ -11,10 +10,11 @@ public:
                 st.push(i);
             }
         }
+        s="";
         while(!st.empty()){
-            result=st.top()+result;
+            s=st.top()+s;
             st.pop();
         }
-        return result;
+        return s;
     }
 };
