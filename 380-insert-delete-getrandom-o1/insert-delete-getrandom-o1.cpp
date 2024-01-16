@@ -18,8 +18,7 @@ public:
     }
     
     int getRandom() {
-    auto it = std::next(s.begin(), rand() % s.size());
-    return *it;
+    return *next(s.begin(), rand() % s.size());
 }
 };
 
